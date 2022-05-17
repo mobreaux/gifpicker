@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-content',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-
+  faSearch = faSearch;
   constructor() { }
 
   ngOnInit(): void {
