@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Observable } from 'rxjs';
-import { GiphyService } from '../giphy-service/giphy.service';
+import { GiphyService } from '../../services/giphy-service/giphy.service';
 
 @Component({
   selector: 'app-content',
