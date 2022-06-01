@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Observable } from 'rxjs';
+import { GiphyService } from '../giphy-service/giphy.service';
 
 @Component({
   selector: 'app-content',
@@ -8,9 +10,18 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 })
 export class ContentComponent implements OnInit {
   faSearch = faSearch;
-  constructor() { }
+  searchCriteria!: string;
+  results: JSON[]|undefined;
+
+  constructor(private giphyService: GiphyService) { }
 
   ngOnInit(): void {
+  }
+
+  search(value: any){
+    this.giphyService.search(this.searchCriteria).subscribe(result => {
+      this.results = result;
+    });
   }
 
 }
