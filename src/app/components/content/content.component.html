@@ -2,8 +2,8 @@
     <div class="col-md-6">
         <div class="input-group">
             <input type="text" class="form-control" id="searchInput" [(ngModel)]="searchCriteria" (keyup)="search(searchCriteria)" placeholder="Let's gif it on"/>
-            <button class="btn btn-outline-secondary"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <button class="btn btn-outline-secondary" (click)="search(searchCriteria)"><fa-icon [icon]="faSearch"></fa-icon></button>
         </div>
-        {{results}}
+        <search-results [results]="this.results"></search-results>
     </div>
 </div>
