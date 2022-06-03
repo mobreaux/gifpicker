@@ -1,1 +1,5 @@
-{{results}}
+<div *ngFor="let res of results | keyvalue">{{res.key}}:
+    <div *ngFor="let subItem of results?.values | keyvalue">
+      {{subItem}}
+    </div>
+  </div>
