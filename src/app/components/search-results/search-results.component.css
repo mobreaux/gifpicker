@@ -1,0 +1,28 @@
+.box {
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box>* {
+    flex: 1 1 40px;
+}
+  
+.gif {
+    opacity: 1;
+}
+
+.btn-dark {
+    transition: .2s ease;
+    opacity: 0;
+    transform: translate(-40%, -40%);
+    -ms-transform: translate(-40%, -40%);
+    text-align: center;
+}
+
+.gif:hover .gif {
+    opacity: 0.3;
+}
+  
+.gif:hover .btn-dark {
+    opacity: 1;
+}

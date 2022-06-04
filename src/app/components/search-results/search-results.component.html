@@ -1,5 +1,8 @@
-<div *ngFor="let res of results | keyvalue">{{res.key}}:
-    <div *ngFor="let subItem of results?.values | keyvalue">
-      {{subItem}}
+<div class="box">
+    <div *ngFor="let gif of results" class="gif">
+        <video autoplay loop muted width="200" height="200" (click)="copy(gif)">
+            <source [src]="gif" type="video/mp4">
+        </video>
+        <button type="button" class="btn btn-dark" (click)="copy(gif)">{{text}}</button>
     </div>
-  </div>
+</div>
