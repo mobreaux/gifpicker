@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
-import {GifResponse} from "../../models/gif-response";
-import {Gif} from "../../models/gif";
+import { GifResponse } from 'src/app/models/search-results/search-results.model';
+
 
 @Injectable({
   providedIn: 'root'

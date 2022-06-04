@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Gif} from "../../models/gif";
+import { Gif } from 'src/app/models/search-results/search-results.model';
 
 @Component({
   selector: 'search-results',

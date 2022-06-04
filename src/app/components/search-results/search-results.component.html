@@ -1,4 +1,9 @@
-<div *ngFor="let gif of results">
-  <img [src]="gif"/>
+<div class="container"
+    style="display: flex; justify-content: center; width: 75%; margin: auto; flex-wrap: wrap;">
+    <div  *ngFor="let gif of results">
+        <video autoplay loop muted width="300" height="300">
+            <source [src]="gif" type="video/mp4">
+        </video>
+    </div>
 </div>
 
