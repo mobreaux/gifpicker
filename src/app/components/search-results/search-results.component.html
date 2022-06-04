@@ -1,9 +1,8 @@
-<div class="container"
-    style="display: flex; justify-content: center; width: 75%; margin: auto; flex-wrap: wrap;">
-    <div  *ngFor="let gif of results">
-        <video autoplay loop muted width="300" height="300">
+<div class="box">
+    <div *ngFor="let gif of results" class="gif">
+        <video autoplay loop muted width="200" height="200" (click)="copy(gif)">
             <source [src]="gif" type="video/mp4">
         </video>
+        <button type="button" class="btn btn-dark" (click)="copy(gif)">{{text}}</button>
     </div>
 </div>
-
