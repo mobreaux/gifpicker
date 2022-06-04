@@ -10,7 +10,7 @@ import { GifResponse } from 'src/app/models/search-results/search-results.model'
 export class GiphyService {
 
   searchURL = 'https://api.giphy.com/v1/gifs/search?api_key=ROp0DXBgxY0w1FmjU0MNXo5nAlZHAVd8&q=';
-  trendingURL = 'https://api.giphy.com/v1/gifs/trending?api_key=ROp0DXBgxY0w1FmjU0MNXo5nAlZHAVd8';
+  randomURL = 'https://api.giphy.com/v1/gifs/random?api_key=ROp0DXBgxY0w1FmjU0MNXo5nAlZHAVd8';
   xhr = new XMLHttpRequest();
   url : String|undefined;
 
@@ -22,6 +22,6 @@ export class GiphyService {
   }
 
   random(): Observable<GifResponse>{
-    return this.http.get<GifResponse>(this.trendingURL);
+    return this.http.get<GifResponse>(this.randomURL);
   }
 }

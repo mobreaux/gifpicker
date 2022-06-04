@@ -17,12 +17,12 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     const urlstr: any[] | undefined = [];
+    for (var i = 0; i<3; i++) {
       this.giphyService.random().subscribe(result => {
-        for (var i = 0; i<3; i++) {
           // @ts-ignore
-          urlstr.push(result?.data[i].images.original.mp4);
-        }
+          urlstr.push(result?.data.images.original_mp4.mp4);
       });
+    }
     this.results = urlstr;
   }
 
@@ -32,7 +32,7 @@ export class ContentComponent implements OnInit {
       for (var i = 0; i<result?.data.length; i++) {
         console.log(result?.data[i]);
         // @ts-ignore
-        urlstr.push(result?.data[i].images.original.mp4);
+        urlstr.push(result?.data[i].images.original_mp4.mp4);
       }
       this.results = urlstr;
     });
