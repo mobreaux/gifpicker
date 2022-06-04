@@ -16,6 +16,14 @@ export class ContentComponent implements OnInit {
   constructor(private giphyService: GiphyService) { }
 
   ngOnInit(): void {
+    const urlstr: any[] | undefined = [];
+      this.giphyService.random().subscribe(result => {
+        for (var i = 0; i<3; i++) {
+          // @ts-ignore
+          urlstr.push(result?.data[i].images.original.mp4);
+        }
+      });
+    this.results = urlstr;
   }
 
   search(value: any){

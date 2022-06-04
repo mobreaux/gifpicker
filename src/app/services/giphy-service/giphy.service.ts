@@ -20,4 +20,8 @@ export class GiphyService {
     const url = `${this.searchURL}${value}`;
     return this.http.get<GifResponse>(url);
   }
+
+  random(): Observable<GifResponse>{
+    return this.http.get<GifResponse>(this.trendingURL);
+  }
 }
